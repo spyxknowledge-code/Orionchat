@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orion Chats</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>✦ Orion Chats</h1>
+      <div id="datetime"></div>
+    </header>
+    <main>
+      <aside id="sidebar">
+        <div id="user-card-container"></div>
+        <div id="room-controls">
+          <input id="room-name-input" placeholder="Room name" />
+          <button id="create-room-btn">Create Room</button>
+          <input id="join-room-input" placeholder="Room ID" />
+          <button id="join-room-btn">Join</button>
+        </div>
+        <div id="room-list"></div>
+        <div id="search-section">
+          <input id="search-user-input" placeholder="Search by @username or ID" />
+          <button id="search-btn">Find</button>
+        </div>
+        <div id="search-result-container"></div>
+        <button id="edit-profile-btn">✎ Edit Profile</button>
+      </aside>
+      <section id="chat-area">
+        <div id="chat-header"><span id="current-room-name">No room</span></div>
+        <div id="messages"></div>
+        <div id="input-area">
+          <input id="msg-input" placeholder="Type..." />
+          <button id="send-btn">Send</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Edit Profile Modal -->
+  <div id="edit-modal" class="modal">
+    <div class="modal-content neon-glow">
+      <span class="close">&times;</span>
+      <h2>Edit Your Profile</h2>
+      <input id="edit-name" placeholder="Name" />
+      <input id="edit-username" placeholder="Username (without @)" />
+      <input id="edit-country" placeholder="Country" />
+      <textarea id="edit-bio" placeholder="Bio"></textarea>
+      <button id="save-profile-btn">Save Changes</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+            </html>
